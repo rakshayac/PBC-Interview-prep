@@ -1,1 +1,253 @@
+1️⃣ DSA Practice (Striver A2Z – Arrays Level 1)
+Platforms: Leetcode / GFG / CodeStudio
+
+Problem 1: Find the second largest element in an array
+
+Problem 2: Rotate array to the left by 1 position
+
+Problem 3: Move all zeros to the end of the array
+------------------------------------------------------------------
+2️⃣ Java Core (OOP + Basics)
+Learn:
+✅ What are Classes and Objects
+
+Class:
+A class in Java is a blueprint or template that defines the structure and behavior (data members and methods) that objects created from the class will have.
+
+🔸 Object:
+An object is an instance of a class. It represents a real-world entity and has state (fields/attributes) and behavior (methods/functions) defined by its class.
+
+🔹 Class (Simple Definition):
+A class is like a blueprint or design.
+
+🧱 Example:
+Think of a Car Design — it says:
+
+A car has 4 wheels.
+
+A car has a color.
+
+A car can drive.
+
+This design is not a real car. It's just a plan.
+
+🔸 Object (Simple Definition):
+An object is a real thing made using the blueprint.
+
+🚗 Example:
+You build a real car using the design. That real car is an object.
+
+You can have many cars (objects) from the same design (class):
+
+Car 1: Red color, drives at 100 km/h.
+
+Car 2: Blue color, drives at 80 km/h.
+
+💡 In Java:
+
+class Car {
+    String color;
+    void drive() {
+        System.out.println("Car is driving");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Car myCar = new Car(); // object
+        myCar.color = "Red";
+        myCar.drive();
+    }
+}
+Car → class (blueprint)
+
+myCar → object (real car)
+lass Car {
+    String color;
+
+    void drive() {
+        System.out.println("Car is driving");
+    }
+
+    void showColor() {
+        System.out.println("Car color is: " + color);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car myCar = new Car();      // Creating an object
+        myCar.color = "Red";        // Setting property
+        myCar.drive();              // Calling drive method
+        myCar.showColor();          // Displaying car color
+    }
+}
+🖨️ Output:
+Car is driving
+Car color is: Red
+______________________________________________________________________________________
+✅ Constructor types (default, parameterized)
+3.constructor – Definition (For Interview)
+A constructor in Java is a special method that is used to initialize objects. It is called automatically when an object is created using the new keyword.
+It has the same name as the class.
+It has no return type, not even void.
+
+✅ Constructor Overloading – Definition (For Interview)
+Constructor overloading in Java means having multiple constructors in the same class with different parameter lists.
+It allows the creation of objects in different ways, depending on how many and what type of arguments you pass.
+
+A default constructor is a special method in a class that gets called when you create an object without passing any arguments.
+It usually looks like this in Java:
+ClassName() {}
+
+ClassName() {}
+🔧 Java Example: Constructor + Constructor Overloading
+java
+Copy
+Edit
+class Student {
+    String name;
+    int age;
+
+    // Default constructor
+    Student() {
+        name = "Unknown";
+        age = 0;
+    }
+
+    // Parameterized constructor
+    Student(String n, int a) {
+        name = n;
+        age = a;
+    }
+
+    void display() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student();              // Calls default constructor
+        Student s2 = new Student("Alice", 21);   // Calls parameterized constructor
+
+        s1.display();
+        s2.display();
+    }
+}
+🖨️ Output:
+
+Name: Unknown, Age: 0
+Name: Alice, Age: 21
+_______________________________________________________________________________________________________________________________
+✅ this keyword usage
+4.Definition (For Interview)
+The this keyword in Java is a reference variable that refers to the current object of the class.
+
+🔑 Uses of this keyword:
+To refer to current class instance variables.
+
+To call current class methods or constructors.
+
+To pass the current object as a parameter.
+
+To return the current object.
+
+🔧 Example: Using this to refer to instance variables
+java
+Copy
+Edit
+class Employee {
+    String name;
+    int id;
+
+    // Constructor
+    Employee(String name, int id) {
+        this.name = name;  // 'this' refers to the current object's variable
+        this.id = id;
+    }
+
+    void display() {
+        System.out.println("Name: " + this.name + ", ID: " + this.id);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee emp1 = new Employee("John", 101);
+        emp1.display();
+    }
+}
+🖨️ Output:
+yaml
+Copy
+Edit
+Name: John, ID: 101
+🧠 Why use this?
+Without this, Java can get confused between instance variables and local variables (like constructor parameters with the same name). this makes it clear you're referring to the current object’s fields.
+
+Task:
+Create a class Book with:
+
+Private fields: id, title, author
+
+Getters and Setters
+
+Constructor to initialize
+public class Book {
+    // Private fields (Encapsulation)
+    private int id;
+    private String title;
+    private String author;
+
+    // Constructor to initialize the Book object
+    public Book(int id, String title, String author) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+    }
+
+    // Getter for id
+    public int getId() {
+        return id;
+    }
+
+    // Setter for id
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    // Getter for title
+    public String getTitle() {
+        return title;
+    }
+
+    // Setter for title
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    // Getter for author
+    public String getAuthor() {
+        return author;
+    }
+
+    // Setter for author
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Book book = new Book(101, "The Alchemist", "Paulo Coelho");
+
+        System.out.println("ID: " + book.getId());
+        System.out.println("Title: " + book.getTitle());
+        System.out.println("Author: " + book.getAuthor());
+
+        // Update values
+        book.setTitle("Brida");
+        System.out.println("Updated Title: " + book.getTitle());
+    }
+}
 
