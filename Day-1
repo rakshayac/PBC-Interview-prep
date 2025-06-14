@@ -250,4 +250,14 @@ public class Main {
         System.out.println("Updated Title: " + book.getTitle());
     }
 }
+---------------------------------------------------------------------------------------------------------------------------------------------------
+3️⃣ Backend – JDBC Basics (Java + MySQL)
+Learn:
+✅ What is JDBC
+✅ How Java connects to a MySQL DB
 
+Task:
+✅ Set up MySQL and try connecting via a simple JDBC program
+✅ Print "Connected!" if successful
+
+https://www.youtube.com/watch?v=-gVOTurhZP8&t=9s(tamil)
