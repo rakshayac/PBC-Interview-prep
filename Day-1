@@ -261,3 +261,17 @@ Task:
 ✅ Print "Connected!" if successful
 
 https://www.youtube.com/watch?v=-gVOTurhZP8&t=9s(tamil)
+-----------------------------------------------------------------------------------------------------------------------------
+4.Project – Library Management System (OOP Project)
+Design 3 base classes:
+✅ Book
+✅ Member
+✅ Library
+
+🔧 Include basic attributes and methods:
+
+Library.addBook()
+
+Library.displayBooks()
+
+Project add in 
