@@ -269,9 +269,8 @@ Design 3 base classes:
 ✅ Library
 
 🔧 Include basic attributes and methods:
-
 Library.addBook()
-
 Library.displayBooks()
 
-Project add in 
+Project add in javaprojects repo
+--------------------------------------------------------------------------------------------------------------------
