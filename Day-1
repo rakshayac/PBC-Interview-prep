@@ -274,3 +274,55 @@ Library.displayBooks()
 
 Project add in javaprojects repo
 --------------------------------------------------------------------------------------------------------------------
+5️⃣ Zoho Interview Questions (Java + DSA – non-repeating from Topic 1)
+Java:
+
+What is inheritance? Give a real-world analogy.
+What is Inheritance in Java?
+Inheritance is one of the four fundamental OOP (Object-Oriented Programming) concepts.
+It allows a class (called a child or subclass) to inherit the properties and behaviors (fields and methods) of another class (called a parent or superclass).
+🔹 Why Use Inheritance?
+Code Reusability: Reuse existing class code in new classes
+Extensibility: Extend and modify behavior without rewriting code
+Polymorphism: Enable method overriding and dynamic method calls
+
+🔧 Syntax Example in Java:
+class Animal {
+    void makeSound() {
+        System.out.println("Some sound");
+    }
+}
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog barks");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.makeSound(); // inherited from Animal
+        d.bark();      // specific to Dog
+    }
+}
+🧠 Real-World Analogy:
+🏫 School Analogy:
+Parent Class: Person
+Properties: name, age
+Method: speak()
+Child Class: Student extends Person
+Additional Properties: studentId, grade
+Additional Method: study()
+🧒 A student is a person, and automatically inherits the ability to speak() without redefining it. But the student can also study()
+— something unique to students.
+
+What is the role of super keyword?
+
+What is final keyword in Java (class, method, variable)?
+
+DSA:
+
+Print all prime numbers up to N
+
+Count frequency of each character in a string
+
+Implement a basic pattern printing (pyramid or triangle)
