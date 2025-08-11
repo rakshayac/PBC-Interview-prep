@@ -1,0 +1,17 @@
+java
+
+1.abstraction (4 pillas)
+  1.1 abstract class
+  1.2 abstract method
+  1.3 interface
+2.variable
+  1.1 local 
+  1.2 global 
+      1.instance variable
+      2.static variable
+
+coding
+  1.palindrome(Sum of Digit is Palindrome or not)
+  2.All divisors of a Number
+3.prime number
+  4.gcd/hcd
