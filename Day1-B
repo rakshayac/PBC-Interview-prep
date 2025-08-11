@@ -1,0 +1,43 @@
+No.	Difficulty	Question 	Topic	"Importance
+(On a scale of 5)"	Comments
+					
+1	Basic	https://practice.geeksforgeeks.org/problems/addition-of-two-numbers0812/1	Math	2	
+2	Basic	https://practice.geeksforgeeks.org/problems/prime-number2314/1	Math	2	
+3	Basic	https://practice.geeksforgeeks.org/problems/lcm-and-gcd4516/1	Math	2	
+4	Basic	https://practice.geeksforgeeks.org/problems/count-squares3649/1	Math	2	
+5	Basic	https://practice.geeksforgeeks.org/problems/count-digits5716/1	Math	2	
+6	Basic	https://practice.geeksforgeeks.org/problems/armstrong-numbers2727/1	Math	2	
+7	Basic	https://practice.geeksforgeeks.org/problems/print-table0303/1	Math	2	
+8	Easy	https://practice.geeksforgeeks.org/problems/reversing-the-equation2205/1	Math	2	
+9	Easy	https://practice.geeksforgeeks.org/problems/all-divisors-of-a-number/1	Math	2	
+10	Easy	https://practice.geeksforgeeks.org/problems/sum-of-digit-is-pallindrome-or-not2751/1	Math	2	
+11	Easy	https://leetcode.com/problems/add-digits/	Math	2	
+12	Easy	https://practice.geeksforgeeks.org/problems/sum-of-all-prime-numbers-between-1-and-n4404/1	Math	4	
+13	Easy	https://leetcode.com/problems/smallest-even-multiple/	Math	3	
+14	Easy	https://leetcode.com/problems/number-of-common-factors/	Math	3	
+15	Medium	https://practice.geeksforgeeks.org/problems/multiply-two-strings/1	Math	3	Also try with trie data structure
+16	Medium	https://practice.geeksforgeeks.org/problems/largest-prime-factor2601/1	Math	3	
+17	Medium	https://leetcode.com/problems/count-primes/	Math	3	
+		Now, Watch the below lecture:			
+		https://youtu.be/jUy5N-3RAjo?si=wtTNUbcYCI_EaQDA	Time Complexity Video		
+18	Medium	https://www.interviewbit.com/courses/programming/time-complexity	TIME COMPLEXITY(15 MCQs.)	3	
+		Now, Watch the below lecture:			
+		https://youtube.com/playlist?list=PLN4aKSfpk8TQDJz7KLiwGFgnoUUwzfl1i&si=YZXBB871ZlMzSouc	Playlist for optimised approaches for computing prime numbers. Go through it after you are able to solve questions with brute force approach.
+
+
+
+Day1- Done
+1.addtion of two numbers
+2.Count digit
+3.print table
+4.armstrong number
+
+java--website(javagoal.com)
+1.What is JAVA language
+2.JAVA features/advantage
+3.How to run Java program
+4.Difference between JRE, JDK and JVM
+5.Variables in Java
+
+Striver a2z
+1.basic Math (7 questions done)
