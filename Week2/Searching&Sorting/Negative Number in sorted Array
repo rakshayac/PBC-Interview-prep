@@ -47,3 +47,4 @@ public class CountNegatives {
         }
         return lastNegative + 1;  // index+1 = count of negatives
     }
+TC: O(logn) sc=O(1)
