@@ -1,56 +1,77 @@
 Binary Search Week Schedule (7 Days)
 Day	Problems to Solve	Notes / Focus
-Day 1 – Basics	
+📅 Day 1 – Basics (7 Qs)
+1. Binary Search (Basic)
 
-1. Binary Search (Iterative + Recursive)
-2. First & Last Occurrence
-3. Count Occurrences
-4. Search Insert Position
-5. Find Element in Infinite Sorted Array	Focus on standard BS template, handling left/right pointers, mid calculation.
+Lower Bound
 
-Day 2 – Rotated / Variant Arrays	
+Upper Bound
 
-6. Search in Rotated Sorted Array I
-7. Search in Rotated Sorted Array II
-8. Find Minimum in Rotated Array
-9. Peak Element
-10. Peak Index in Mountain Array
-11. Single Element in Sorted Array	Practice rotated arrays and peak finding; understand mid logic for unsorted halves.
+Floor of a Number
 
-Day 3 – Kth / Median Problems	
+Ceil of a Number
 
-12. Kth Smallest Element in Sorted Matrix
-13. Median of Two Sorted Arrays
-14. Maximum Average Subarray (Binary Search on Answer)
-15. Count Negative Numbers in Sorted Matrix
-16. Smallest Divisor Given Threshold	Binary search on answer / range pattern; very common in interviews.
+First and Last Occurrence of Element
 
-Day 4 – Allocation / Partition Problems	
+Count of Element in Sorted Array
 
-17. Aggressive Cows
-18. Painter’s Partition Problem
-19. Book Allocation Problem
-20. Capacity to Ship Packages within D Days
-21. Minimum Days to Make Bouquets	Practice binary search on decision space, often asked in Flipkart/PayPal.
+📅 Day 2 – Rotated & Special Search (6 Qs)
+Search in Rotated Sorted Array – I
 
-Day 5 – Advanced / Miscellaneous	
+Search in Rotated Sorted Array – II (duplicates)
 
-22. Magnetic Force Between Balls
-23. Wood Cutting Problem
-24. Sqrt(x)
-25. Nth Root of M
-26. Minimize Max Distance	Focus on numeric problems with binary search on real numbers / thresholds.
+Find Minimum in Rotated Sorted Array
 
-Day 6 – Mixed Practice	
+Find Peak Element (1D)
 
-27. Search in 2D Matrix I
-28. Search in 2D Matrix II
-29. Split Array Largest Sum
-30. Koko Eating Bananas
-31. Minimum Speed to Arrive on Time
-32. Maximize Minimum Distance	Mix of matrix + allocation + answer search problems.
+Find Square Root (integer)
 
-Day 7 – Mock / Review	33. Remaining 3–5 problems from curated BS list
-34–35. Re-attempt previous mistakes
-Optional: Any extra interview variant	Attempt problems without hints, review mistakes, note patterns.
+Single Element in Sorted Array
 
+📅 Day 3 – Infinite & 2D (4 Qs)
+Find in Infinite Sorted Array
+
+Find Index of First 1 in Infinite Binary Array
+
+Search in 2D Matrix (Leetcode 74)
+
+Find Nth Root of a Number
+
+📅 Day 4 – Allocation Type (6 Qs)
+Find Median of Two Sorted Arrays
+
+Allocate Minimum Number of Pages
+
+Aggressive Cows
+
+Painter’s Partition Problem
+
+Capacity to Ship Packages Within D Days
+
+Koko Eating Bananas
+
+📅 Day 5 – Advanced Allocation / Matrix (6 Qs)
+Split Array Largest Sum
+
+Minimize Maximum Distance to Gas Station
+
+Median in a Row-Wise Sorted Matrix
+
+Find Peak Element in 2D Matrix
+
+Wood Cutting Problem (Eko SPOJ)
+
+Magnetic Force Between Two Balls
+
+📅 Day 6 – Hard / High-Frequency (6 Qs)
+Find Smallest Divisor Given Threshold
+
+Ugly Number III
+
+Kth Smallest Pair Distance
+
+Search in Bitonic Array
+
+Search in Mountain Array
+
+Kth Smallest Element in Multiplication Table
