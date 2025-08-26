@@ -1,6 +1,7 @@
 Binary Search Week Schedule (7 Days)
-Day	Problems to Solve	Notes / Focus
+
 📅 Day 1 – Basics (7 Qs)
+    
 1. Binary Search (Basic)
 class BinarySearchBasic {
     public static int search(int[] arr, int target) {
