@@ -426,7 +426,7 @@ target = 3
 }
 
 
-📅 Day 2 – Rotated & Special Search (6 Qs)
+📅 Day 2 – Rotated & Special Search (6 Qs)leetcode 33
 Search in Rotated Sorted Array – I
 ஒரு array, முதலில் sorted இருந்தது. ஆனா rotate பண்ணிருப்பாங்க.
 அந்த arrayல target value இருக்கா இல்லையா என்று index கண்டுபிடிக்கணும்.
@@ -489,7 +489,64 @@ class RotatedSearchI {
     }
 }
 
-Search in Rotated Sorted Array – II (duplicates)
+Search in Rotated Sorted Array – II (duplicates)leetcode 81
+    Example 1:
+
+Input: nums = [2,5,6,0,0,1,2], target = 0
+Output: true
+Example 2:
+
+Input: nums = [2,5,6,0,0,1,2], target = 3
+Output: false
+                                     class Solution {
+    public boolean search(int[] nums, int target) {
+        int low = 0, high = nums.length - 1;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+
+            // 🎯 found
+            if (nums[mid] == target) return true;
+
+            // 🔥 If duplicates at both ends → shrink
+            if (nums[low] == nums[mid] && nums[mid] == nums[high]) {
+                low++;
+                high--;
+            }
+            // 🟢 Left side sorted
+            else if (nums[low] <= nums[mid]) {
+                if (target >= nums[low] && target < nums[mid]) {
+                    high = mid - 1;
+                } else {
+                    low = mid + 1;
+                }
+            }
+            // 🔵 Right side sorted
+            else {
+                if (target > nums[mid] && target <= nums[high]) {
+                    low = mid + 1;
+                } else {
+                    high = mid - 1;
+                }
+            }
+        }
+        return false;
+    }
+}
+4. 🌟 Edge Cases
+Empty array → return false
+
+All elements same except one → should still work
+Example: [2,2,2,3,2,2], target=3 → true
+
+Target not present → return false
+Example: [1,1,1,1,1], target=2 → false
+
+5. 🎮 Dry Run
+Input:
+nums = [2,5,6,0,0,1,2], target=0
+
+low=0, high=6, mid=3 → nums[mid]=0 🎯 found → return true
 
 Find Minimum in Rotated Sorted Array
 
