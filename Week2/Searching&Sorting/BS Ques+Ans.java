@@ -428,6 +428,66 @@ target = 3
 
 📅 Day 2 – Rotated & Special Search (6 Qs)
 Search in Rotated Sorted Array – I
+ஒரு array, முதலில் sorted இருந்தது. ஆனா rotate பண்ணிருப்பாங்க.
+அந்த arrayல target value இருக்கா இல்லையா என்று index கண்டுபிடிக்கணும்.
+இல்லன்னா -1 return பண்ணணும்.
+
+Example
+
+nums = [4,5,6,7,0,1,2], target = 0 → Output: 4
+nums = [4,5,6,7,0,1,2], target = 3 → Output: -1
+✅ Idea / Approach (Tamil Explanation)
+Normal binary search போலவே செய்வோம் → ஆனால் array split ஆனதால் கவனிக்கணும்.
+
+ஒவ்வொரு step-லும் mid எடுப்போம்.
+ஒரு half எப்போதும் sorted ஆக இருக்கும் (left half or right half).
+அந்த sorted halfல target இருக்கா என்று check பண்ணி, அந்தப் பாதியில் போவோம்.
+இல்லன்னா மற்ற பாதியில் search பண்ணுவோம்.
+
+✅ Java Code with Tamil Comments
+java
+class RotatedSearchI {
+    public static int search(int[] nums, int target) {
+        int low = 0, high = nums.length - 1;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+
+            // ✅ target கிடைச்சா direct return
+            if (nums[mid] == target) return mid;
+
+            // 🔎 எந்த பக்கம் sorted என்பதை கண்டுபிடிக்கணும்
+            if (nums[low] <= nums[mid]) { 
+                // 👈 Left side sorted
+                if (target >= nums[low] && target < nums[mid]) {
+                    high = mid - 1; // target left sideல இருக்கும்
+                } else {
+                    low = mid + 1;  // இல்லன்னா right sideக்கு போ
+                }
+            } else {
+                // 👈 Right side sorted
+                if (target > nums[mid] && target <= nums[high]) {
+                    low = mid + 1;  // target right sideல இருக்கும்
+                } else {
+                    high = mid - 1; // இல்லன்னா leftக்கு போ
+                }
+            }
+        }
+
+        return -1; // ❌ target கிடைக்கலை
+    }
+
+    public static void main(String[] args) {
+        int[] arr1 = {4,5,6,7,0,1,2};
+        System.out.println(search(arr1, 0)); // 4
+
+        int[] arr2 = {4,5,6,7,0,1,2};
+        System.out.println(search(arr2, 3)); // -1
+
+        int[] arr3 = {1};
+        System.out.println(search(arr3, 0)); // -1
+    }
+}
 
 Search in Rotated Sorted Array – II (duplicates)
 
@@ -440,6 +500,8 @@ Find Square Root (integer)
 Single Element in Sorted Array
 
 📅 Day 3 – Infinite & 2D (4 Qs)
+Find Minimum in Rotated Sorted Array ||
+    
 Find in Infinite Sorted Array
 
 Find Index of First 1 in Infinite Binary Array
