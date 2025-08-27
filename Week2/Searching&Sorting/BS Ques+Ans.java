@@ -654,6 +654,57 @@ Explanation: The original array was [0,1,2,4,5,6,7] and it was rotated 4 times.
 
 --------------------------------------------------
 12.Find Square Root (integer)
+
+    Example:
+Input: x = 8 → Output: 2 (because √8 = 2.82 → floor = 2)
+Input: x = 16 → Output: 4
+
+    class Solution {
+    public int mySqrt(int x) {
+        if (x == 0 || x == 1) return x;  // 🟢 base case
+
+        int low = 1, high = x, ans = 0;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            
+            // long பயன்படுத்துறது (mid*mid overflow ஆகாமல்)
+            long val = (long) mid * mid;
+
+            if (val == x) {
+                return mid; // perfect square
+            }
+            else if (val < x) {
+                ans = mid;     // இதுவரை best candidate
+                low = mid + 1; // இன்னும் பெரிய number try பண்ணலாம்
+            }
+            else {
+                high = mid - 1; // மிக பெரியது, leftக்கு போகணும்
+            }
+        }
+        return ans;
+    }
+}
+4️⃣ Dry Run Examples
+Example 1: x = 8
+low=1, high=8
+
+mid=4 → 4*4=16 > 8 → high=3
+
+mid=2 → 2*2=4 < 8 → ans=2, low=3
+
+mid=3 → 3*3=9 > 8 → high=2
+
+loop end → ans=2 ✅
+
+Example 2: x = 16
+mid=8 → 64 > 16 → high=7
+
+mid=4 → 16 == 16 → return 4 ✅
+
+Example 3: x = 1
+base case → return 1 ✅
+
 -------------------------------------------------
 13.Single Element in Sorted Array
 ---------------------------------------------------
