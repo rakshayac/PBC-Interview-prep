@@ -584,21 +584,88 @@ low=3, high=3 → stop → nums[3]=1 answer'class Solution {
 -------------------------------------------------
 11.Find Minimum in Rotated Sorted Array ||
 
+    🔑 Idea
+if (nums[low] == nums[mid] && nums[mid] == nums[high]) → எல்லா இடத்திலும் ஒரே number இருந்தால்,
+நம்மக்கு தெரியல → minimum left side இருக்கா? right side இருக்கா?
 
+👉 அந்த ambiguity avoid பண்ண,
 
-Find Square Root (integer)
+low++ → left-ல ஒரு duplicate skip பண்ணுறோம்
 
-Single Element in Sorted Array
+high-- → right-ல ஒரு duplicate skip பண்ணுறோம்
 
+இதனால் search space சின்னது ஆகும்.
+
+🎮 Example
+Array = [2,2,2,0,2,2]
+
+low=0 (2), high=5 (2), mid=2 (2)
+
+nums[low]==nums[mid]==nums[high] → condition true
+
+அதனால low++, high-- → now low=1, high=4
+
+Next stepல mid 2 again check பண்ணும் → finally 0 தான் minimum எனக் கண்டுபிடிக்கும்.
+
+🚫 என்ன நடக்கும் high-- இல்லையென்றால்?
+Duplicates காரணமாக infinite loop அல்லது unnecessary repeat ஆகிடும்.
+
+Example [2,2,2,2,2] → இங்க progress இல்லை,
+ஆனால் low++ & high-- இருந்தால் boundary narrow ஆகும் → loop break ஆகும்.
+
+👶 2nd Grade Tamil Explanation:
+"ஒரே மாதிரி எண் எல்லா இடமும் இருக்கும்போது நம்மக்கு எந்த பக்கம் போகணும் தெரியாது.
+அதனால leftலிருந்தும் rightலிருந்தும் ஒன்னு ஒன்னா எடுத்துவிட்டு narrow பண்ணுறோம்.
+அப்புறம் தான் answer எளிதா கிடைக்கும்."
+
+class Solution {
+    public int findMin(int[] nums) {
+        int low = 0, high = nums.length - 1;
+        while (low < high) {
+            int mid = low + (high - low) / 2;
+
+            // 🟢 Case 1: Duplicates both sides
+            if (nums[low] == nums[mid] && nums[mid] == nums[high]) {
+                low++;
+                high--;
+            }
+            // 🟢 Case 2: Minimum is in right side
+            else if (nums[mid] > nums[high]) {
+                low = mid + 1;
+            }
+            // 🟢 Case 3: Minimum is in left side or mid itself
+            else {
+                high = mid;
+            }
+        }
+        return nums[low];
+    }
+}
+Example 1:
+
+Input: nums = [3,4,5,1,2]
+Output: 1
+Explanation: The original array was [1,2,3,4,5] rotated 3 times.
+Example 2:
+
+Input: nums = [4,5,6,7,0,1,2]
+Output: 0
+Explanation: The original array was [0,1,2,4,5,6,7] and it was rotated 4 times.
+
+--------------------------------------------------
+12.Find Square Root (integer)
+-------------------------------------------------
+13.Single Element in Sorted Array
+---------------------------------------------------
 📅 Day 3 – Infinite & 2D (4 Qs)
-Find Peak Element (1D)
-    
-Find in Infinite Sorted Array
-
-Find Index of First 1 in Infinite Binary Array
-
-Search in 2D Matrix (Leetcode 74)
-
+14.Find Peak Element (1D)
+---------------------------------------------------- -----
+15.Find in Infinite Sorted Array
+----------------------------------------------------------
+16.Find Index of First 1 in Infinite Binary Array
+----------------------------------------------------------
+17.Search in 2D Matrix (Leetcode 74)
+---------------------------------------------------
 Find Nth Root of a Number
 
 📅 Day 4 – Allocation Type (6 Qs)
