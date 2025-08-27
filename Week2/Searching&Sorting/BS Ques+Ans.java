@@ -548,8 +548,41 @@ nums = [2,5,6,0,0,1,2], target=0
 low=0, high=6, mid=3 → nums[mid]=0 🎯 found → return true
 -------------------------------------------------
 10.Find Minimum in Rotated Sorted Array
+7. Dry Run Example
+Input: [3,4,5,1,2]
 
-Find Minimum in Rotated Sorted Array ||
+low=0 (3), high=4 (2) → nums[low] > nums[high] so rotated
+mid=2 → nums[mid]=5 > nums[high]=2 → low = mid+1 = 3
+low=3, high=4
+mid=3 → nums[mid]=1 <= nums[high]=2 → high=mid=3
+low=3, high=3 → stop → nums[3]=1 answer'class Solution {
+    public int findMin(int[] nums) {
+        int low = 0, high = nums.length - 1;
+
+        // ஏற்கனவே sorted இருந்தா -> முதல் element தான் min
+        if (nums[low] <= nums[high]) {
+            return nums[low];
+        }
+
+        while (low < high) {
+            int mid = low + (high - low) / 2;
+
+            // Tamil Reason: mid > highன்னா -> minimum right sideல் இருக்கு
+            if (nums[mid] > nums[high]) {
+                low = mid + 1;
+            } 
+            else {
+                // Tamil Reason: இல்லனா -> minimum left sideல் இருக்கு (mid உட்பட)
+                high = mid;
+            }
+        }
+
+        // Tamil Reason: low == high ஆனதும் அது தான் minimum
+        return nums[low];
+    }
+}
+-------------------------------------------------
+11.Find Minimum in Rotated Sorted Array ||
 
 
 
