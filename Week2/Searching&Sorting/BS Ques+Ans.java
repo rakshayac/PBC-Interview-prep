@@ -27,8 +27,7 @@ class BinarySearchBasic {
         System.out.println(search(arr, target)); // Output: 3
     }
 }
-
-
+-----------------------------------------------------------------------
 2.Lower Bound
 
     📝 Problem Statement
@@ -89,7 +88,7 @@ Next mid = (0+1)//2 = 0 → arr[0] = 2 → இது 5க்கு குறை�
 Next mid = (1+1)//2 = 1 → arr[1] = 4 → இது 5க்கு குறைவு → so low=2
 
 இப்போ loop முடிஞ்சது → ans=2 → return 2
-
+----------------------------------------------------------
 3.Upper Bound
     Problem Statement
 Sorted array-இல் ஒரு target கொடுக்கப்பட்டிருக்கும்.
@@ -151,7 +150,7 @@ Loop முடிஞ்சது → ans=3
         System.out.println(upperBound(arr4, 4)); // Output: 2 (since 6 > 4)
     }
 }
-
+--------------------------------------------
 4.Floor of a Number
 arr = [2, 4, 6, 8, 10], target = 5
 low=0, high=4
@@ -205,7 +204,7 @@ loop முடிஞ்சது
         System.out.println(floor(arr4, 10)); // 7
     }
 }
-
+-------------------------------------------
 5.Ceil of a Number
 Example 1
 
@@ -265,7 +264,7 @@ loop முடிஞ்சது
         System.out.println(ceil(arr4, 1));  // 3
     }
 }
-
+------------------------------------------------
 
 6.First and Last Occurrence of Element
     📝 Problem
@@ -346,7 +345,7 @@ arr[mid] == target ஆனாலும் இன்னும் right-ல இர�
         System.out.println("Last: " + lastOccurrence(arr3, 6));   // -1
     }
 }
-
+-----------------------------------------------------------
 
 7.Count of Element in Sorted Array
     📝 Problem
@@ -424,10 +423,10 @@ target = 3
         System.out.println(countElement(arr3, 6)); // 0
     }
 }
-
-
+--------------------------------------------------------------
 📅 Day 2 – Rotated & Special Search (6 Qs)leetcode 33
-Search in Rotated Sorted Array – I
+    
+8.Search in Rotated Sorted Array – I
 ஒரு array, முதலில் sorted இருந்தது. ஆனா rotate பண்ணிருப்பாங்க.
 அந்த arrayல target value இருக்கா இல்லையா என்று index கண்டுபிடிக்கணும்.
 இல்லன்னா -1 return பண்ணணும்.
@@ -488,8 +487,8 @@ class RotatedSearchI {
         System.out.println(search(arr3, 0)); // -1
     }
 }
-
-Search in Rotated Sorted Array – II (duplicates)leetcode 81
+----------------------------------------------------------------------
+9.Search in Rotated Sorted Array – II (duplicates)leetcode 81
     Example 1:
 
 Input: nums = [2,5,6,0,0,1,2], target = 0
@@ -547,17 +546,19 @@ Input:
 nums = [2,5,6,0,0,1,2], target=0
 
 low=0, high=6, mid=3 → nums[mid]=0 🎯 found → return true
+-------------------------------------------------
+10.Find Minimum in Rotated Sorted Array
 
-Find Minimum in Rotated Sorted Array
+Find Minimum in Rotated Sorted Array ||
 
-Find Peak Element (1D)
+
 
 Find Square Root (integer)
 
 Single Element in Sorted Array
 
 📅 Day 3 – Infinite & 2D (4 Qs)
-Find Minimum in Rotated Sorted Array ||
+Find Peak Element (1D)
     
 Find in Infinite Sorted Array
 
