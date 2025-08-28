@@ -717,7 +717,7 @@ base case → return 1 ✅
 ----------------------------------------------------------
 17.Search in 2D Matrix (Leetcode 74)
 ---------------------------------------------------
-Find Nth Root of a Number
+18.Find Nth Root of a Number
 
 📅 Day 4 – Allocation Type (6 Qs)
 Find Median of Two Sorted Arrays
