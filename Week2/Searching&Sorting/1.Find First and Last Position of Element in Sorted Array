@@ -1,17 +1,21 @@
 Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.
-
 If target is not found in the array, return [-1, -1].
-
 You must write an algorithm with O(log n) runtime complexity.
-
- 
-
+1.Naive Approach (சாதாரணமான முறையில்)
+முழு array-ஐ traverse பண்ணிட்டு target இருக்கும் இடங்களை collect பண்ணலாம்.
+First occurrence & last occurrence எடுக்கலாம்.
+Time complexity: O(n) → பெரிய input-க்கு slow ஆகிடும்.
+2.Optimal Approach
+இரண்டு special binary search functions எழுதலாம்:
+findFirst() → target வந்ததும் left side-ல இன்னும் target இருக்கா என்று search பண்ணும்.
+findLast() → target வந்ததும் right side-ல இன்னும் target இருக்கா என்று search பண்ணும்.
+இதனால் exact [first, last] index கிடைக்கும்.
+Time Complexity: O(log n).
+Space Complexity: O(1).
 Example 1:
-
 Input: nums = [5,7,7,8,8,10], target = 8
 Output: [3,4]
 Example 2:
-
 Input: nums = [5,7,7,8,8,10], target = 6
 Output: [-1,-1]
 Example 3:
@@ -63,5 +67,46 @@ class Solution {
             }
         }
         return arr;
+    }
+}
+class Solution {
+    public int[] searchRange(int[] nums, int target) {
+        int first = findFirst(nums, target);
+        int last = findLast(nums, target);
+        return new int[]{first, last};
+    }
+
+    private int findFirst(int[] nums, int target) {
+        int low = 0, high = nums.length - 1;
+        int ans = -1;
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            if (nums[mid] == target) {
+                ans = mid;        // candidate answer
+                high = mid - 1;   // இன்னும் left sideல target இருக்கா check பண்ணணும்
+            } else if (nums[mid] < target) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        return ans;
+    }
+
+    private int findLast(int[] nums, int target) {
+        int low = 0, high = nums.length - 1;
+        int ans = -1;
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            if (nums[mid] == target) {
+                ans = mid;        // candidate answer
+                low = mid + 1;    // இன்னும் right sideல target இருக்கா check பண்ணணும்
+            } else if (nums[mid] < target) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        return ans;
     }
 }
